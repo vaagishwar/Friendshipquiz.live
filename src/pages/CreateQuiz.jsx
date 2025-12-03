@@ -128,9 +128,9 @@ function CreateQuiz() {
     const questionWithAnswer = {
       ...currentQuestion,
       correctAnswer: optionIndex,
-      options: currentQuestion.options.map(opt => opt.text) // Convert to simple text array for storage
+      options: currentQuestion.options // Save full options with images
     }
-    
+
     const newSelectedQuestions = [...selectedQuestions]
     newSelectedQuestions[currentQuestionIndex] = questionWithAnswer
     setSelectedQuestions(newSelectedQuestions)
@@ -157,7 +157,7 @@ function CreateQuiz() {
 
   const finishQuizCreation = async () => {
     const validQuestions = selectedQuestions.filter(q => q && q.correctAnswer !== undefined)
-    
+
     if (validQuestions.length >= 5) {
       try {
         const id = await createQuiz(creatorName, validQuestions)
@@ -184,7 +184,7 @@ function CreateQuiz() {
   const shareOnSocial = (platform) => {
     const url = getQuizUrl()
     const text = `Take my friendship quiz and see how well you know me! Created by ${creatorName}`
-    
+
     let shareUrl = ''
     switch (platform) {
       case 'whatsapp':
@@ -201,7 +201,7 @@ function CreateQuiz() {
         alert('Link copied! You can now paste it in your Instagram story or bio.')
         return
     }
-    
+
     if (shareUrl) {
       window.open(shareUrl, '_blank')
     }
@@ -221,12 +221,12 @@ function CreateQuiz() {
             </span>
           </div>
           <div className="w-full bg-gray-200 rounded-full h-2">
-            <div 
+            <div
               className="bg-blue-600 h-2 rounded-full transition-all duration-300"
-              style={{ 
-                width: currentStep === 1 ? '33%' : 
-                       currentStep === 2 ? `${33 + ((currentQuestionIndex + 1) / predefinedQuestions.length) * 34}%` : 
-                       '100%' 
+              style={{
+                width: currentStep === 1 ? '33%' :
+                  currentStep === 2 ? `${33 + ((currentQuestionIndex + 1) / predefinedQuestions.length) * 34}%` :
+                    '100%'
               }}
             ></div>
           </div>
@@ -253,7 +253,7 @@ function CreateQuiz() {
                   required
                 />
               </div>
-              
+
               <button
                 type="submit"
                 className="w-full btn-primary flex items-center justify-center"
@@ -283,7 +283,7 @@ function CreateQuiz() {
             {/* Progress Bar */}
             <div className="mb-8">
               <div className="w-full bg-gray-200 rounded-full h-2">
-                <div 
+                <div
                   className="bg-blue-600 h-2 rounded-full transition-all duration-300"
                   style={{ width: `${((currentQuestionIndex + 1) / predefinedQuestions.length) * 100}%` }}
                 ></div>
@@ -299,15 +299,14 @@ function CreateQuiz() {
                     selectAnswer(index)
                     setTimeout(() => nextQuestion(), 500) // Auto advance after selection
                   }}
-                  className={`relative overflow-hidden rounded-xl transition-all duration-200 transform hover:scale-105 hover:shadow-lg ${
-                    selectedQuestions[currentQuestionIndex]?.correctAnswer === index 
-                      ? 'ring-4 ring-blue-500 scale-105' 
+                  className={`relative overflow-hidden rounded-xl transition-all duration-200 transform hover:scale-105 hover:shadow-lg ${selectedQuestions[currentQuestionIndex]?.correctAnswer === index
+                      ? 'ring-4 ring-blue-500 scale-105'
                       : ''
-                  }`}
+                    }`}
                 >
                   <div className="aspect-square relative">
-                    <img 
-                      src={option.image} 
+                    <img
+                      src={option.image}
                       alt={option.text}
                       className="w-full h-full object-cover"
                       onError={(e) => {
