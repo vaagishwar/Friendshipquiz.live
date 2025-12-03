@@ -155,13 +155,18 @@ function CreateQuiz() {
     nextQuestion()
   }
 
-  const finishQuizCreation = () => {
+  const finishQuizCreation = async () => {
     const validQuestions = selectedQuestions.filter(q => q && q.correctAnswer !== undefined)
     
     if (validQuestions.length >= 5) {
-      const id = createQuiz(creatorName, validQuestions)
-      setQuizId(id)
-      setCurrentStep(3)
+      try {
+        const id = await createQuiz(creatorName, validQuestions)
+        setQuizId(id)
+        setCurrentStep(3)
+      } catch (error) {
+        console.error('Error creating quiz:', error)
+        alert('Error creating quiz. Please try again.')
+      }
     } else {
       alert('Please answer at least 5 questions to create your quiz.')
     }

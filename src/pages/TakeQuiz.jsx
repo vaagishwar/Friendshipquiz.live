@@ -21,7 +21,7 @@ function TakeQuiz() {
       // Set a maximum loading time
       const loadingTimeout = setTimeout(() => {
         setIsLoading(false)
-      }, 1000)
+      }, 2000)
       
       return () => clearTimeout(loadingTimeout)
     }
@@ -51,7 +51,7 @@ function TakeQuiz() {
     setSelectedAnswer(answerIndex)
   }
 
-  const handleNextQuestion = () => {
+  const handleNextQuestion = async () => {
     if (selectedAnswer !== null) {
       const newAnswers = [...answers]
       newAnswers[currentQuestion] = selectedAnswer
@@ -62,8 +62,15 @@ function TakeQuiz() {
         setCurrentQuestion(currentQuestion + 1)
       } else {
         // Submit quiz
-        const score = submitQuizAnswers(quizId, participantName, newAnswers)
-        navigate(`/results/${quizId}?participant=${encodeURIComponent(participantName)}&score=${score}`)
+        try {
+          setIsLoading(true)
+          const score = await submitQuizAnswers(quizId, participantName, newAnswers)
+          navigate(`/results/${quizId}?participant=${encodeURIComponent(participantName)}&score=${score}`)
+        } catch (error) {
+          console.error('Error submitting quiz:', error)
+          alert('Error submitting quiz. Please try again.')
+          setIsLoading(false)
+        }
       }
     }
   }
