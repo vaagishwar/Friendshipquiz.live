@@ -15,7 +15,7 @@ function Footer() {
             </div>
             <p className="text-gray-400 mb-4">
               Create personalized friendship quizzes and discover who knows you best. 
-              Join over 2.3 million users who have already created their quizzes!
+              
             </p>
             <div className="flex space-x-4">
               <a href="#" className="text-gray-400 hover:text-white transition-colors">
@@ -82,7 +82,7 @@ function Footer() {
 
         <div className="border-t border-gray-800 mt-8 pt-8 text-center">
           <p className="text-gray-400">
-            © 2024 Friendship Quizzes. All rights reserved.
+            Made for Friends👋
           </p>
         </div>
       </div>

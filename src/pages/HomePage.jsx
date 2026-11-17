@@ -85,7 +85,7 @@ function HomePage() {
           </Link>
           
           <p className="mt-6 text-blue-100">
-            Join the <strong>2.3 million+</strong> creators already laughing at their results
+            Create the <strong> Quiz! </strong> know your true friend
           </p>
         </div>
       </section>
@@ -142,7 +142,7 @@ function HomePage() {
       </section>
 
       {/* What Makes Us Different Section */}
-      <section className="py-20 bg-blue-600 text-white">
+      <section className="py-20 bg-blue-900 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
@@ -175,28 +175,28 @@ function HomePage() {
       <section className="py-20 bg-gray-900 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-12">
-            Join the Fun – Over 2.3M Quizzes Created!
+            Join the Fun
           </h2>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div>
-              <div className="text-4xl md:text-5xl font-bold text-blue-400 mb-2">2.3M+</div>
-              <div className="text-xl text-gray-300">Quizzes Created</div>
+              <div className="text-4xl md:text-5xl font-bold text-blue-400 mb-2">CREATE</div>
+              <div className="text-xl text-gray-300">Qui&zzes</div>
             </div>
             <div>
-              <div className="text-4xl md:text-5xl font-bold text-green-400 mb-2">15M+</div>
-              <div className="text-xl text-gray-300">Quiz Attempts</div>
+              <div className="text-4xl md:text-5xl font-bold text-green-400 mb-2">SHARE</div>
+              <div className="text-xl text-gray-300">On Whatsapp</div>
             </div>
             <div>
-              <div className="text-4xl md:text-5xl font-bold text-yellow-400 mb-2">98%</div>
-              <div className="text-xl text-gray-300">User Satisfaction</div>
+              <div className="text-4xl md:text-5xl font-bold text-yellow-400 mb-2">TREND</div>
+              <div className="text-xl text-gray-300">Among Friends</div>
             </div>
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-pink-500 to-purple-600 text-white">
+      <section className="py-20 bg-gray-800 text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <Heart className="h-16 w-16 mx-auto mb-6 text-pink-200" />
           <h2 className="text-3xl md:text-4xl font-bold mb-6">

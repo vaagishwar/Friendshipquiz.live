@@ -6,13 +6,14 @@ function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
   return (
-    <header className="bg-white shadow-sm border-b">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="sticky bg-white top-0">
+      <header className=" shadow-sm  border-b ">
+      <div className="max-w-7xl mx-auto  px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2">
             <Heart className="h-8 w-8 text-pink-500" />
-            <span className="text-xl font-bold text-gray-900">Friendship Quizzes</span>
+            <span className="text-xl font-bold text-gray-900">Friendship Quiz</span>
           </Link>
 
           {/* Desktop Navigation */}
@@ -80,6 +81,7 @@ function Header() {
         )}
       </div>
     </header>
+    </div>
   )
 }
 

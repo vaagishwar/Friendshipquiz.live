@@ -4,13 +4,13 @@ import { Heart, Users, Share2, Trophy, ArrowRight } from 'lucide-react'
 
 function AboutUs() {
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gray-800">
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20">
+      <section className="bg-gray-100  text-black py-20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <Heart className="h-16 w-16 mx-auto mb-6 text-pink-200" />
+          <Heart className="h-16 w-16 mx-auto mb-6 text-pink-600" />
           <h1 className="text-4xl md:text-5xl font-bold mb-6">About Friendship Quizzes</h1>
-          <p className="text-xl text-blue-100 max-w-2xl mx-auto">
+          <p className="text-xl text-white-100 max-w-2xl mx-auto">
             We believe that friendship is one of life's greatest treasures, and we've created the perfect way to celebrate and strengthen those bonds.
           </p>
         </div>
@@ -19,9 +19,9 @@ function AboutUs() {
       {/* Story Section */}
       <section className="py-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-white rounded-xl shadow-lg p-8 mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-6 text-center">Our Story</h2>
-            <div className="prose prose-lg max-w-none text-gray-600">
+          <div className="bg-gray-700 text-white rounded-xl shadow-lg p-8 mb-12">
+            <h2 className="text-3xl font-bold  mb-6 text-center">Our Story</h2>
+            <div className="prose prose-lg max-w-none ">
               <p className="mb-6">
                 It all started with a simple question: "How well do my friends really know me?" What began as classroom "how well do you know me quiz?" notes has evolved into a social media phenomenon that's bringing friends closer together, one question at a time.
               </p>
@@ -67,7 +67,7 @@ function AboutUs() {
       </section>
 
       {/* Stats Section */}
-      <section className="py-16">
+      {/* <section className="py-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">Our Impact</h2>
@@ -102,7 +102,7 @@ function AboutUs() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Features Section */}
       <section className="py-16 bg-gray-100">
@@ -172,7 +172,7 @@ function AboutUs() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
+      <section className="py-16 bg-gray-900/20 text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-bold mb-6">Ready to Test Your Friendships?</h2>
           <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">

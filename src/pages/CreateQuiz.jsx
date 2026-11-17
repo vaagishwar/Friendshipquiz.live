@@ -300,8 +300,8 @@ function CreateQuiz() {
                     setTimeout(() => nextQuestion(), 500) // Auto advance after selection
                   }}
                   className={`relative overflow-hidden rounded-xl transition-all duration-200 transform hover:scale-105 hover:shadow-lg ${selectedQuestions[currentQuestionIndex]?.correctAnswer === index
-                      ? 'ring-4 ring-blue-500 scale-105'
-                      : ''
+                    ? 'ring-4 ring-blue-500 scale-105'
+                    : ''
                     }`}
                 >
                   <div className="aspect-square relative">
@@ -336,27 +336,27 @@ function CreateQuiz() {
                 onClick={() => setCurrentStep(1)}
                 className="btn-secondary flex items-center"
               >
-                <ArrowLeft className="mr-2 h-5 w-5" />
+                <ArrowLeft className="" />
                 Back
               </button>
 
-              <div className="flex gap-4">
-                <button
+              <div className="flex ">
+                {/* <button
                   onClick={skipQuestion}
                   className="btn-secondary"
                 >
                   Skip
-                </button>
+                </button> */}
 
-                {currentQuestionIndex > 0 && (
+                {/* {currentQuestionIndex > 0 && (
                   <button
                     onClick={previousQuestion}
                     className="btn-secondary flex items-center"
                   >
-                    <ArrowLeft className="mr-2 h-5 w-5" />
+                    <ArrowLeft className="" />
                     Previous
                   </button>
-                )}
+                )} */}
 
                 {selectedQuestions.filter(q => q).length >= 5 && (
                   <button
@@ -364,7 +364,7 @@ function CreateQuiz() {
                     className="btn-primary flex items-center"
                   >
                     Create Quiz
-                    <ArrowRight className="ml-2 h-5 w-5" />
+                    <ArrowRight className="" />
                   </button>
                 )}
               </div>

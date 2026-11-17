@@ -264,7 +264,7 @@ function Contact() {
                 </a>
                 <a
                   href="#"
-                  className="w-10 h-10 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-lg flex items-center justify-center hover:from-purple-600 hover:to-pink-600 transition-colors"
+                  className="w-10 h-10 bg-gray-900 from-purple-500 to-pink-500 text-white rounded-lg flex items-center justify-center hover:from-purple-600 hover:to-pink-600 transition-colors"
                 >
                   <span className="sr-only">Instagram</span>
                   i
